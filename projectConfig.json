@@ -55,7 +55,17 @@
     "close": [],
     "tabs": [],
     "object-fit-polyfill": [],
-    "embed-responsive": []
+    "embed-responsive": [],
+    "call-btn": [],
+    "top-contacts": [],
+    "main-section": [],
+    "how-it-works": [],
+    "lease": [],
+    "service": [],
+    "advantages": [],
+    "reviews": [],
+    "feedback": [],
+    "about": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",
