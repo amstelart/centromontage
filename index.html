@@ -1,0 +1,520 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Центр-монтаж</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
+
+  <script>
+    // Маркер работающего javascript
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    document.addEventListener('DOMContentLoaded', function(){
+      if (window.isMobile !== undefined) {
+        // console.log(isMobile);
+        if(isMobile.any) {
+          var rootClasses = ' is-mobile';
+          for (key in isMobile) {
+            if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
+            if(typeof isMobile[key] === 'object' && key !== 'other') {
+              for (type in isMobile[key]) {
+                if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+              }
+            }
+          }
+          document.documentElement.className += rootClasses;
+        }
+      }
+      else {
+        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+      }
+    });
+
+  </script>
+
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <header class="page-header" role="banner">
+
+        <div class="page-header__inner">
+
+          <div class="page-header__content">
+
+            <a href="/" class="logo">
+              <img src="img/logo.png" width="197" height="37" alt="logo">
+            </a>
+
+            <a class="call-btn" href="#modal-call" data-toggle="modal"><span>Заказать звонок</span></a>
+
+            <div class="top-contacts">
+              <div class="top-contacts__item">+7 (4712) 52-03-86</div>
+              <div class="top-contacts__item"><a href="mailto:isc46@yandex.ru">isc46@yandex.ru</a></div>
+              <div class="top-contacts__item">Курск, ул. Советская, 15А</div>
+            </div>
+
+            <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
+
+            <nav id="main-nav" class="main-nav" role="navigation">
+              <!-- <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button> -->
+              <ul class="main-nav__list">
+                <li class="main-nav__item">
+                  <a href="page-about.html" class="main-nav__link">
+                    О компании
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Услуги
+                  </a>
+                </li>
+                <li class="main-nav__item main-nav__item--active">
+                  <a href="#" class="main-nav__link">
+                    Аренда спецтехники
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Производственная база
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Выполненные объекты
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="page-vacancy.html" class="main-nav__link">
+                    Вакансии
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="page-contacts.html" class="main-nav__link">
+                    Контакты
+                  </a>
+                </li>
+              </ul>
+            </nav>
+
+          </div>
+
+        </div>
+
+      </header>
+
+
+      <section class="slider-section">
+
+        <div id="main-slider" class="owl-carousel main-slider">
+
+          <div class="main-slider__item" style="background-image: url(img/slider-image-01.jpg);">
+
+            <div class="main-slider__inner">
+              <div class="main-slider__caption">
+                <div class="main-slider__title">Наименование объекта</div>
+                <div class="main-slider__text">Описание в одну-несколько строк</div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="main-slider__item" style="background-image: url(img/slider-image-01.jpg);">
+
+            <div class="main-slider__inner">
+              <div class="main-slider__caption">
+                <div class="main-slider__title">Наименование объекта</div>
+                <div class="main-slider__text">Описание в одну-несколько строк</div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="main-slider__item" style="background-image: url(img/slider-image-01.jpg);">
+
+            <div class="main-slider__inner">
+              <div class="main-slider__caption">
+                <div class="main-slider__title">Наименование объекта</div>
+                <div class="main-slider__text">Описание в одну-несколько строк</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="main-slider__form-inner">
+          <div class="main-slider__form-wrap">
+            <div class="main-slider__form-title">Наш менеджер ответит на ваши вопросы</div>
+            <form class="main-slider__form" action="">
+
+              <label class="field-text">
+                <!-- <span class="field-text__name">Текст</span> -->
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="text" placeholder="Имя">
+                  <!-- <span class="field-text__help-text">Пояснение</span> -->
+                </span>
+              </label>
+
+              <label class="field-text">
+                <!-- <span class="field-text__name">Текст</span> -->
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="tel" placeholder="Телефон">
+                  <!-- <span class="field-text__help-text">Пояснение</span> -->
+                </span>
+              </label>
+
+              <div class="field-actions">
+                <button class="btn">Оставить заявку</button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+      </section>
+
+      <!-- секция услуг -->
+      <section class="main-section main-section--service">
+        <div class="main-section__inner">
+          <h2 class="main-section__title">Услуги</h2>
+          <div class="main-section__content">
+            <div class="service-cards__wrapper">
+              <div class="service-cards" style="background-image: url(img/service-image-01.png);">
+                <a href="#" class="service-cards__link" >
+                  <span>Наименование объекта №1</span>
+                </a>
+              </div>
+              <div class="service-cards" style="background-image: url(img/service-image-01.png);">
+                <a href="#" class="service-cards__link">
+                  <span>Наименование объекта №2</span>
+                </a>
+              </div>
+              <div class="service-cards" style="background-image: url(img/service-image-01.png);">
+                <a href="#" class="service-cards__link">
+                  <span>Наименование объекта №3</span>
+                </a>
+              </div>
+              <div class="service-cards" style="background-image: url(img/service-image-01.png);">
+                <a href="#" class="service-cards__link">
+                  <span>Наименование объекта №4</span>
+                </a>
+              </div>
+              <div class="service-cards" style="background-image: url(img/service-image-01.png);">
+                <a href="#" class="service-cards__link">
+                  <span>Наименование объекта №5</span>
+                </a>
+              </div>
+              <div class="service-cards" style="background-image: url(img/service-image-01.png);">
+                <a href="#" class="service-cards__link">
+                  <span>Наименование объекта №6</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end секция услуг -->
+
+      <!-- секция аренды спецтехники -->
+      <section class="main-section">
+        <div class="main-section__inner">
+          <h2 class="main-section__title">Аренда спецтехники</h2>
+          <div class="main-section__content">
+
+          <div class="lease">
+            <div class="lease__item">
+              <div class="lease__item-image">
+                <img src="img/lease-image-01.png" alt="">
+              </div>
+              <a href="#" class="lease__item-caption">Автомобильные краны</a>
+            </div>
+            <div class="lease__item">
+              <div class="lease__item-image">
+                <img src="img/lease-image-02.png" alt="">
+              </div>
+              <a href="#" class="lease__item-caption">Гусеничные краны <br>(при долгосрочной аренде)</a>
+            </div>
+            <div class="lease__item">
+              <div class="lease__item-image">
+                <img src="img/lease-image-03.png" alt="">
+              </div>
+              <a href="#" class="lease__item-caption">Автовышки</a>
+            </div>
+            <div class="lease__item">
+              <div class="lease__item-image">
+                <img src="img/lease-image-04.png" alt="">
+              </div>
+              <a href="#" class="lease__item-caption">Мини-краны «Маеда» для работы на перекрытиях</a>
+            </div>
+          </div>
+
+          </div>
+        </div>
+      </section>
+      <!-- end секция аренды спецтехники -->
+
+      <!-- секция как мы работаем -->
+      <section class="main-section main-section--how-it-works">
+        <div class="main-section__inner">
+          <h2 class="main-section__title">Как мы работаем</h2>
+          <div class="main-section__content">
+            <div class="how-it-works">
+              <div class="how-it-works__item">
+                <div class="how-it-works__item-count"></div>
+                <div class="how-it-works__item-image">
+                  <img src="img/how-it-works-image-01.jpg" alt="">
+                </div>
+                <div class="how-it-works__item-caption">Анализируем проект</div>
+              </div>
+              <div class="how-it-works__item">
+                <div class="how-it-works__item-count"></div>
+                <div class="how-it-works__item-image">
+                  <img src="img/how-it-works-image-02.jpg" alt="">
+                </div>
+                <div class="how-it-works__item-caption">Проводим оценку и подготовку сметы</div>
+              </div>
+              <div class="how-it-works__item">
+                <div class="how-it-works__item-count"></div>
+                <div class="how-it-works__item-image">
+                  <img src="img/how-it-works-image-03.jpg" alt="">
+                </div>
+                <div class="how-it-works__item-caption">Выезжаем на место предстоящео строительства</div>
+              </div>
+              <div class="how-it-works__item">
+                <div class="how-it-works__item-count"></div>
+                <div class="how-it-works__item-image">
+                  <img src="img/how-it-works-image-04.jpg" alt="">
+                </div>
+                <div class="how-it-works__item-caption">Заключаем договор</div>
+              </div>
+              <div class="how-it-works__item">
+                <div class="how-it-works__item-count"></div>
+                <div class="how-it-works__item-image">
+                  <img src="img/how-it-works-image-05.jpg" alt="">
+                </div>
+                <div class="how-it-works__item-caption">Выполняем работу</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end секция как мы работаем -->
+
+      <!-- секция Преимущества -->
+      <section class="main-section">
+        <div class="main-section__inner">
+          <h2 class="main-section__title">Преимущества</h2>
+          <div class="main-section__content">
+            <div class="advantages">
+              <div class="advantages__item advantages__item--01">
+                <div class="advantages__item-title">Более 70 крупных проектов</div>
+                <p>Нашими клиентами являются: ООО «Строительная компания»,
+                  ООО «Строительная компания», ООО «Строительная компания»,
+                  ООО «Строительная компания»</p>
+              </div>
+              <div class="advantages__item advantages__item--02">
+                <div class="advantages__item-title">Более 150 высококвалифицированных сотрудников</div>
+                <p>Все инженерно-технические работники имеют высшее техническое
+                образование и проходят повышение квалификации раз в  5 лет</p>
+              </div>
+              <div class="advantages__item advantages__item--03">
+                <div class="advantages__item-title">Есть лицензия на работы с повышенной сложностью</div>
+                <p>Можем приводить работы на таких объектах, как: объект, требующий
+                работы с повышенной сложностью, объект, требующий работы
+                с повышенной сложностью</p>
+              </div>
+              <div class="advantages__item advantages__item--04">
+                <div class="advantages__item-title">Имеется допуск на опасные работы по изготовлению и монтажу металлоконструкций</div>
+                <p>Можем приводить работы на таких объектах, как: объект, требующий работы с повышенной сложностью</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end секция Преимущества -->
+
+      <section class="main-section main-section--about">
+        <div class="main-section__inner">
+          <div class="main-section__content">
+            <div class="about">
+              <div class="about__title">Малярный цех и цех с дробометной установкой для очистки металла от коррозии</div>
+              <div class="about__caption">Механически можно удалять любые загрязнения, однако наиболее часто таким образом<br>
+              производят очистку поверхности металла от ржавчины, окалины, старой краски и других старых покрытий.</div>
+              <div class="about__cards">
+                <div class="about__card">
+                  <div class="about__card-image" style="background-image: url(img/about-image-01.jpg);"></div>
+                  <div class="about__card-caption">Ржавая балка</div>
+                </div>
+                <div class="about__card">
+                  <div class="about__card-image" style="background-image: url(img/about-image-02.jpg);"></div>
+                  <div class="about__card-caption">После дробомета</div>
+                </div>
+                <div class="about__card">
+                  <div class="about__card-image" style="background-image: url(img/about-image-03.jpg);"></div>
+                  <div class="about__card-caption">После покраски</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- секция обратной связи -->
+      <section class="main-section main-section--feedback">
+        <div class="main-section__inner">
+          <div class="main-section__content">
+            <div class="feedback">
+              <div class="feedback__title">Остались вопросы?</div>
+              <div class="feedback__caption">Для получения подробной информации звоните нам <span>+7 (4712) 52-17-11</span> или оставьте заявку</div>
+              <form class="feedback-form" action="">
+
+                <label class="field-text feedback-form__field">
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="text" placeholder="Имя">
+                  </span>
+                </label>
+
+                <label class="field-text feedback-form__field">
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="tel" placeholder="Телефон">
+                  </span>
+                </label>
+
+                <div class="field-actions feedback-form__field">
+                  <button class="btn">Отправить</button>
+                </div>
+
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end секция обратной связи -->
+
+      <!-- секция Отзывы -->
+      <section class="main-section main-section--reviews">
+        <div class="main-section__inner">
+          <h2 class="main-section__title">Отзывы</h2>
+          <div class="main-section__content">
+            <div class="reviews">
+              <div class="reviews__item">
+                <div class="embed-responsive  embed-responsive--16-9">
+                  <iframe src="https://www.youtube.com/embed/HNpLuXOg7xQ" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="reviews__item-caption">Компания ООО «Стройметалл»</div>
+              </div>
+              <div class="reviews__item">
+                <div class="embed-responsive  embed-responsive--16-9">
+                  <iframe src="https://www.youtube.com/embed/HNpLuXOg7xQ" frameborder="0" allowfullscreen></iframe>
+                </div>
+                <div class="reviews__item-caption">Компания ООО «Стройметалл»</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- end секция Отзывы -->
+
+    </div>
+
+    <div class="page__footer-wrapper">
+
+      <footer class="page-footer" role="contentinfo">
+        <div class="page-footer__top">
+          <div class="page-footer__inner">
+
+            <div class="page-footer__content">
+
+              <a href="/" class="logo">
+                <img src="img/logo.png" width="197" height="37" alt="logo">
+              </a>
+
+              <a class="call-btn" href="#modal-call" data-toggle="modal"><span>Заказать звонок</span></a>
+
+              <div class="footer-info">
+                <div class="footer-info__item">
+                  <span>+7 (4712) 52-03-86</span><br>
+                  <span>+7-910-215-82-90</span>
+                </div>
+                <div class="footer-info__item">
+                  <a href="mailto:isc46@yandex.ru">isc46@yandex.ru</a>
+                </div>
+              </div>
+
+              <ul class="footer-nav">
+                <li class="footer-nav__item"><a class="footer-nav__link" href="#">О компании</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link" href="#">Услуги</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link" href="#">Аренда спецтехники</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link" href="#">Производственная база</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link" href="#">Выполненные объекты</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link" href="#">Контакты</a></li>
+              </ul>
+
+            </div>
+
+
+          </div>
+        </div>
+        <div class="page-footer__bottom">
+          <div class="page-footer__inner">
+            <p class="copyright--showbiz">Разработка &#8212; <a href="http://www.2showbiz.ru/">«Showbiz Studio»</a></p>
+          </div>
+        </div>
+      </footer>
+
+      <div id="modal-call" class="modal" tabindex="-1" role="dialog">
+        <div class="modal__dialog" role="document">
+          <div class="modal__content">
+            <div class="modal__header">
+              <span class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+              <h4 class="modal__title">Заказать звонок</h4>
+            </div>
+            <div class="modal__body">
+              <form class="main-slider__form" action="">
+
+                <label class="field-text">
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="text" placeholder="Имя">
+                  </span>
+                </label>
+
+                <label class="field-text">
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="tel" placeholder="Телефон">
+                  </span>
+                </label>
+
+                <div class="field-actions">
+                  <button class="btn">Оставить заявку</button>
+                </div>
+
+              </form>
+            </div>
+            <div class="modal__footer">
+              <!-- <button type="button" class="btn" data-dismiss="modal">Закрыть</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <script src="js/script.min.js"></script>
+
+</body>
+</html>

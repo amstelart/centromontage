@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html class="no-js  page" lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <title>Центр-монтаж</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700&amp;subset=cyrillic" rel="stylesheet">
+  <link href="css/style.min.css" rel="stylesheet" media="screen">
+
+  <script>
+    // Маркер работающего javascript
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    document.addEventListener('DOMContentLoaded', function(){
+      if (window.isMobile !== undefined) {
+        // console.log(isMobile);
+        if(isMobile.any) {
+          var rootClasses = ' is-mobile';
+          for (key in isMobile) {
+            if(typeof isMobile[key] === 'boolean' && isMobile[key] && key !== 'any') rootClasses += ' is-mobile--'+key;
+            if(typeof isMobile[key] === 'object' && key !== 'other') {
+              for (type in isMobile[key]) {
+                if(isMobile[key][type]) rootClasses += ' is-mobile--'+key+'-'+type;
+              }
+            }
+          }
+          document.documentElement.className += rootClasses;
+        }
+      }
+      else {
+        console.log('Классы для мобильных не добавлены: в сборке отсутствует isMobile.js');
+      }
+    });
+
+  </script>
+
+  <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
+
+  <link rel="icon" href="img/favicon.ico" type="image/x-icon">
+
+</head>
+
+<body>
+
+  <div class="page__inner">
+
+    <div class="page__content">
+
+      <header class="page-header" role="banner">
+
+        <div class="page-header__inner">
+
+          <div class="page-header__content">
+
+            <a href="/" class="logo">
+              <img src="img/logo.png" width="197" height="37" alt="logo">
+            </a>
+
+            <a class="call-btn" href="#modal-call" data-toggle="modal"><span>Заказать звонок</span></a>
+
+            <div class="top-contacts">
+              <div class="top-contacts__item">+7 (4712) 52-03-86</div>
+              <div class="top-contacts__item"><a href="mailto:isc46@yandex.ru">isc46@yandex.ru</a></div>
+              <div class="top-contacts__item">Курск, ул. Советская, 15А</div>
+            </div>
+
+            <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button>
+
+            <nav id="main-nav" class="main-nav" role="navigation">
+              <!-- <button id="main-nav-toggler" class="main-nav__toggler  burger"><span></span></button> -->
+              <ul class="main-nav__list">
+                <li class="main-nav__item">
+                  <a href="page-about.html" class="main-nav__link">
+                    О компании
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Услуги
+                  </a>
+                </li>
+                <li class="main-nav__item main-nav__item--active">
+                  <a href="#" class="main-nav__link">
+                    Аренда спецтехники
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Производственная база
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="#" class="main-nav__link">
+                    Выполненные объекты
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="page-vacancy.html" class="main-nav__link">
+                    Вакансии
+                  </a>
+                </li>
+                <li class="main-nav__item">
+                  <a href="page-contacts.html" class="main-nav__link">
+                    Контакты
+                  </a>
+                </li>
+              </ul>
+            </nav>
+
+          </div>
+
+        </div>
+
+      </header>
+
+
+      <section class="main-section main-section--breadcrumbs">
+        <div class="main-section__inner">
+          <ul class="breadcrumbs">
+            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Главная</a></li>
+            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Каталог</a></li>
+            <li class="breadcrumbs__item"><a href="" class="breadcrumbs__link">Маркеры</a></li>
+          </ul>
+        </div>
+      </section>
+
+      <main class="content" role="main">
+
+        <h1 class="content__title">Заголовок страницы</h1>
+
+        <h1>H1 Второстеменный заголовок</h1>
+        <h2>H2 Второстеменный заголовок</h2>
+        <h3>H3 Второстеменный заголовок</h3>
+        <h4>H4 Второстеменный заголовок</h4>
+        <h5>H5 Второстеменный заголовок</h5>
+
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id ut saepe nobis ullam non, nesciunt possimus omnis neque dicta quasi! Sed culpa nobis non distinctio inventore, error sunt eos aspernatur ratione molestiae quae ut magni perspiciatis totam rerum quod ducimus repellat ex! Alias voluptates necessitatibus facere quam odio autem repellendus, natus quidem veritatis, expedita voluptatibus sint velit! Molestiae rem itaque unde quia dolores harum aliquid voluptates cum non natus delectus atque officiis nostrum, ad quasi quas illum alias, sed accusamus et ab quae? Fugiat magnam eaque dolorem cupiditate iusto, sunt obcaecati, nemo, maxime iste inventore corporis illum odio a. Officia.</p>
+        <hr>
+        <h3>H3 Второстеменный заголовок</h3>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id ut saepe nobis ullam non, nesciunt possimus omnis neque dicta quasi! Sed culpa nobis non distinctio inventore, error sunt eos aspernatur ratione molestiae quae ut magni perspiciatis totam rerum quod ducimus repellat ex! Alias voluptates necessitatibus facere quam odio autem repellendus, natus quidem veritatis, expedita voluptatibus sint velit! Molestiae rem itaque unde quia dolores harum aliquid voluptates cum non natus delectus atque officiis nostrum, ad quasi quas illum alias, sed accusamus et ab quae? Fugiat magnam eaque dolorem cupiditate iusto, sunt obcaecati, nemo, maxime iste inventore corporis illum odio a. Officia.</p>
+        <hr>
+        <h4>H4 Второстеменный заголовок</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id ut saepe nobis ullam non, nesciunt possimus omnis neque dicta quasi! Sed culpa nobis non distinctio inventore, error sunt eos aspernatur ratione molestiae quae ut magni perspiciatis totam rerum quod ducimus repellat ex! Alias voluptates necessitatibus facere quam odio autem repellendus, natus quidem veritatis, expedita voluptatibus sint velit! Molestiae rem itaque unde quia dolores harum aliquid voluptates cum non natus delectus atque officiis nostrum, ad quasi quas illum alias, sed accusamus et ab quae? Fugiat magnam eaque dolorem cupiditate iusto, sunt obcaecati, nemo, maxime iste inventore corporis illum odio a. Officia.</p>
+
+      </main>
+
+
+    </div>
+
+    <div class="page__feedback">
+      <div class="main-section__inner">
+        <div class="main-section__content">
+          <div class="feedback">
+            <div class="feedback__title">Остались вопросы?</div>
+            <div class="feedback__caption">Для получения подробной информации звоните нам <span>+7 (4712) 52-17-11</span> или оставьте заявку</div>
+            <form class="feedback-form" action="">
+
+              <label class="field-text feedback-form__field">
+                <!-- <span class="field-text__name">Текст</span> -->
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="text" placeholder="Имя">
+                  <!-- <span class="field-text__help-text">Пояснение</span> -->
+                </span>
+              </label>
+
+              <label class="field-text feedback-form__field">
+                <!-- <span class="field-text__name">Текст</span> -->
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="tel" placeholder="Телефон">
+                  <!-- <span class="field-text__help-text">Пояснение</span> -->
+                </span>
+              </label>
+
+              <div class="field-actions feedback-form__field">
+                <button class="btn">Отправить</button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="page__footer-wrapper">
+
+      <footer class="page-footer" role="contentinfo">
+        <div class="page-footer__top">
+          <div class="page-footer__inner">
+
+            <div class="page-footer__content">
+
+              <a href="/" class="logo">
+                <img src="img/logo.png" width="197" height="37" alt="logo">
+              </a>
+
+              <a class="call-btn" href="#modal-call" data-toggle="modal"><span>Заказать звонок</span></a>
+
+              <div class="footer-info">
+                <div class="footer-info__item">
+                  <span>+7 (4712) 52-03-86</span><br>
+                  <span>+7-910-215-82-90</span>
+                </div>
+                <div class="footer-info__item">
+                  <a href="mailto:isc46@yandex.ru">isc46@yandex.ru</a>
+                </div>
+              </div>
+
+              <ul class="footer-nav">
+                <li class="footer-nav__item"><a class="footer-nav__link" href="#">О компании</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link" href="#">Услуги</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link" href="#">Аренда спецтехники</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link" href="#">Производственная база</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link" href="#">Выполненные объекты</a></li>
+                <li class="footer-nav__item"><a class="footer-nav__link" href="#">Контакты</a></li>
+              </ul>
+
+            </div>
+
+
+          </div>
+        </div>
+        <div class="page-footer__bottom">
+          <div class="page-footer__inner">
+            <p class="copyright--showbiz">Разработка &#8212; <a href="http://www.2showbiz.ru/">«Showbiz Studio»</a></p>
+          </div>
+        </div>
+      </footer>
+
+      <div id="modal-call" class="modal" tabindex="-1" role="dialog">
+        <div class="modal__dialog" role="document">
+          <div class="modal__content">
+            <div class="modal__header">
+              <span class="close  modal__close" data-dismiss="modal" aria-label="Закрыть"><span></span></span>
+              <h4 class="modal__title">Заказать звонок</h4>
+            </div>
+            <div class="modal__body">
+              <form class="main-slider__form" action="">
+
+                <label class="field-text">
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="text" placeholder="Имя">
+                  </span>
+                </label>
+
+                <label class="field-text">
+                  <span class="field-text__input-wrap">
+                    <input class="field-text__input" type="tel" placeholder="Телефон">
+                  </span>
+                </label>
+
+                <div class="field-actions">
+                  <button class="btn">Оставить заявку</button>
+                </div>
+
+              </form>
+            </div>
+            <div class="modal__footer">
+              <!-- <button type="button" class="btn" data-dismiss="modal">Закрыть</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+  <script src="js/script.min.js"></script>
+
+</body>
+</html>
