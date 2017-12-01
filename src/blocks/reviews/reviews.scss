@@ -13,6 +13,9 @@
   &__item {
     @include make-col(6);
     margin-bottom: 20px;
+    @media (max-width: ($menu-desktop-width - 1)) {
+      @include make-col(12);
+    }
   }
 
   &__item-caption {

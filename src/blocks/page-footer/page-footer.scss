@@ -21,13 +21,36 @@
     display: -webkit-flex;
     display: -ms-flex;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     padding-top: 40px;
     padding-bottom: 40px;
+    @media (max-width: ($menu-desktop-width - 1)) {
+      // flex-direction: column;
+      .footer-nav {
+        display: none;
+      }
+    }
+    @media (max-width: $screen-md) {
+      flex-direction: column;
+      .logo {
+        margin-bottom: 20px;
+      }
+      .call-btn {
+        margin-left: 0;
+        margin-bottom: 20px;
+      }
+      .footer-info {
+        text-align: center;
+      }
+    }
   }
 
   .copyright--showbiz {
     color: #9a9a9a;
+    @media (max-width: $screen-md) {
+      text-align: center;
+    }
     a {
       color: #9a9a9a;
 

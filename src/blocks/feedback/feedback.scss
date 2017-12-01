@@ -7,10 +7,16 @@
   $block-name:                &; // #{$block-name}__element
 
   border: 3px solid #ffbe02;
-  padding: 30px;
+  padding: 30px 100px;
   background-image: url(../img/feedback-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
+  @media (max-width: ($menu-desktop-width - 1)) {
+    padding: 20px 60px;
+  }
+  @media (max-width: ($screen-sm)) {
+    padding: 20px;
+  }
 
   &__title {
     font-size: 30px;
@@ -32,6 +38,12 @@
     span {
       font-size: 18px;
     }
+  }
+
+  &--page {
+    background-color: #ededed;
+    background-image: none;
+    border: none;
   }
 
 }

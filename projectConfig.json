@@ -65,7 +65,14 @@
     "advantages": [],
     "reviews": [],
     "feedback": [],
-    "about": []
+    "about": [],
+    "content": [],
+    "objec-cards": [],
+    "about-info": [],
+    "main-slider": [],
+    "feedback-form": [],
+    "footer-nav": [],
+    "footer-info": []
   },
   "addCssBefore": [
     "./src/scss/variables.scss",

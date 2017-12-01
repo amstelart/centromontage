@@ -19,4 +19,18 @@
     align-items: center;
   }
 
+  @media (max-width: ($menu-desktop-width - 1)) {
+    .top-contacts,
+    .call-btn {
+      display: none;
+    }
+    #{$block-name}__inner {
+      padding-top: 15px;
+      padding-bottom: 15px;
+    }
+    .main-nav {
+      margin: 0;
+    }
+  }
+
 }

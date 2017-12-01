@@ -16,38 +16,112 @@
 
       @@include('blocks/page-header/page-header.html')
 
-      <!-- <main role="main">
+      <section class="slider-section">
 
-        <h1>NTH start project</h1>
+        <div id="main-slider" class="owl-carousel main-slider">
 
-        <p><a href="blocks-demo.html">Страница с демкой компонентов</a></p>
+          <div class="main-slider__item" style="background-image: url(img/slider-image-01.jpg);">
 
-      </main> -->
+            <div class="main-slider__inner">
+              <div class="main-slider__caption">
+                <div class="main-slider__title">Наименование объекта</div>
+                <div class="main-slider__text">Описание в одну-несколько строк</div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="main-slider__item" style="background-image: url(img/slider-image-01.jpg);">
+
+            <div class="main-slider__inner">
+              <div class="main-slider__caption">
+                <div class="main-slider__title">Наименование объекта</div>
+                <div class="main-slider__text">Описание в одну-несколько строк</div>
+              </div>
+            </div>
+
+          </div>
+
+          <div class="main-slider__item" style="background-image: url(img/slider-image-01.jpg);">
+
+            <div class="main-slider__inner">
+              <div class="main-slider__caption">
+                <div class="main-slider__title">Наименование объекта</div>
+                <div class="main-slider__text">Описание в одну-несколько строк</div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="main-slider__form-inner">
+          <div class="main-slider__form-wrap">
+            <div class="main-slider__form-title">Наш менеджер ответит на ваши вопросы</div>
+            <form class="main-slider__form" action="">
+
+              <label class="field-text">
+                <!-- <span class="field-text__name">Текст</span> -->
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="text" placeholder="Имя">
+                  <!-- <span class="field-text__help-text">Пояснение</span> -->
+                </span>
+              </label>
+
+              <label class="field-text">
+                <!-- <span class="field-text__name">Текст</span> -->
+                <span class="field-text__input-wrap">
+                  <input class="field-text__input" type="tel" placeholder="Телефон">
+                  <!-- <span class="field-text__help-text">Пояснение</span> -->
+                </span>
+              </label>
+
+              <div class="field-actions">
+                <button class="btn">Оставить заявку</button>
+              </div>
+
+            </form>
+          </div>
+        </div>
+
+      </section>
 
       <!-- секция услуг -->
       <section class="main-section main-section--service">
         <div class="main-section__inner">
           <h2 class="main-section__title">Услуги</h2>
           <div class="main-section__content">
-            <div class="service">
-              <a class="service__item" href="#" style="background-image: url(img/service-image-01.png);">
-                <span>Изготовление металлоконструкций</span>
-              </a>
-              <a class="service__item" href="#" style="background-image: url(img/service-image-02.png);">
-                <span>Монтаж металлоконструкций</span>
-              </a>
-              <a class="service__item" href="#" style="background-image: url(img/service-image-03.jpg);">
-                <span>Усиление металлических и железобетонных конструкций</span>
-              </a>
-              <a class="service__item" href="#" style="background-image: url(img/service-image-04.png);">
-                <span>Монтаж сборных железобетонных конструкций</span>
-              </a>
-              <a class="service__item" href="#" style="background-image: url(img/service-image-05.jpg);">
-                <span>Сварка металлоконструкций</span>
-              </a>
-              <a class="service__item" href="#" style="background-image: url(img/service-image-06.png);">
-                <span>Ограждающие конструкции панелей Сендвич</span>
-              </a>
+            <div class="service-cards__wrapper">
+              <div class="service-cards" style="background-image: url(img/service-image-01.png);">
+                <a href="#" class="service-cards__link" >
+                  <span>Наименование объекта №1</span>
+                </a>
+              </div>
+              <div class="service-cards" style="background-image: url(img/service-image-01.png);">
+                <a href="#" class="service-cards__link">
+                  <span>Наименование объекта №2</span>
+                </a>
+              </div>
+              <div class="service-cards" style="background-image: url(img/service-image-01.png);">
+                <a href="#" class="service-cards__link">
+                  <span>Наименование объекта №3</span>
+                </a>
+              </div>
+              <div class="service-cards" style="background-image: url(img/service-image-01.png);">
+                <a href="#" class="service-cards__link">
+                  <span>Наименование объекта №4</span>
+                </a>
+              </div>
+              <div class="service-cards" style="background-image: url(img/service-image-01.png);">
+                <a href="#" class="service-cards__link">
+                  <span>Наименование объекта №5</span>
+                </a>
+              </div>
+              <div class="service-cards" style="background-image: url(img/service-image-01.png);">
+                <a href="#" class="service-cards__link">
+                  <span>Наименование объекта №6</span>
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -207,23 +281,19 @@
               <div class="feedback__caption">Для получения подробной информации звоните нам <span>+7 (4712) 52-17-11</span> или оставьте заявку</div>
               <form class="feedback-form" action="">
 
-                <label class="field-text">
-                  <!-- <span class="field-text__name">Текст</span> -->
+                <label class="field-text feedback-form__field">
                   <span class="field-text__input-wrap">
                     <input class="field-text__input" type="text" placeholder="Имя">
-                    <!-- <span class="field-text__help-text">Пояснение</span> -->
                   </span>
                 </label>
 
-                <label class="field-text">
-                  <!-- <span class="field-text__name">Текст</span> -->
+                <label class="field-text feedback-form__field">
                   <span class="field-text__input-wrap">
                     <input class="field-text__input" type="tel" placeholder="Телефон">
-                    <!-- <span class="field-text__help-text">Пояснение</span> -->
                   </span>
                 </label>
 
-                <div class="field-actions">
+                <div class="field-actions feedback-form__field">
                   <button class="btn">Отправить</button>
                 </div>
 

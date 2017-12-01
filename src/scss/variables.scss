@@ -12,7 +12,7 @@ $gray-lighter:                hsl(0, 0%, 80%);
 $gray-lightest:               hsl(0, 0%, 90%);
 $white:                       hsl(0, 0%, 100%);
 
-$color-main:                  hsl(208, 98%, 43%);
+$color-main:                  #ffbe02;
 $color-success:               hsl(120, 39%, 54%);
 $color-danger:                hsl(2, 64%, 58%);
 $color-warning:               hsl(35, 84%, 62%);
@@ -28,7 +28,7 @@ $body-bg:                     #fff;
 $link-color:                  $color-main;
 $link-color--hover:           darken($color-main, 15%);
 
-$border-color:                $gray-light;
+$border-color:                #e9e9e9;
 
 
 
@@ -78,7 +78,7 @@ $grid-gutter-width:           30px;
 
 // Разное
 
-$field-padding-vertical:      0.3em;
+$field-padding-vertical:      0.7em;
 $field-padding-horizontal:    0.7em;
 
 $border-radius:               3px;
